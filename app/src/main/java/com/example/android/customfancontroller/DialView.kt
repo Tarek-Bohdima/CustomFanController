@@ -1,7 +1,11 @@
 package com.example.android.customfancontroller
 
 import android.content.Context
-import android.graphics.*
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.PointF
+import android.graphics.Typeface
 import android.util.AttributeSet
 import android.view.View
 import androidx.core.content.withStyledAttributes
@@ -112,7 +116,7 @@ class DialView @JvmOverloads constructor(
             FanSpeed.LOW -> fanSpeedLowColor
             FanSpeed.MEDIUM -> fanSpeedMediumColor
             FanSpeed.HIGH -> fanSeedMaxColor
-        } as Int
+        }
 
         // Draw the dial.
         canvas.drawCircle((width / 2).toFloat(), (height / 2).toFloat(), radius, paint)
